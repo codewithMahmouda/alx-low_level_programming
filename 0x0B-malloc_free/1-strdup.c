@@ -1,4 +1,4 @@
-#include <stdlib.h>
+i#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -29,5 +29,5 @@ char *_strdup(char *str)
 	while ((dup[i] = str[i] != '\0')
 			i++;
 
-			return (dup);
+	return (dup);
 }
