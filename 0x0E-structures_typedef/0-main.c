@@ -12,6 +12,7 @@ int main(void)
 	my_dog.name = "Candy";
 	my_dog.age = 4.8;
 	my_dog.owner = "Meco";
-	printf("My name is %s, and I am %.1f :) - Woof!\n", ,y_dog.name, my_dog.age);
+	printf("My name is %s, and I am %.1f :) - Woof!\n", y_dog.name, my_dog.age);
+
 	return (0);
 }
