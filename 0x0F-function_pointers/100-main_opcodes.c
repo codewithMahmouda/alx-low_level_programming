@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main-prints its own opcodes
+ * main - prints its own opcodes
  * @argc: number of arguments
  * @argv: array of arguments
  *
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 			printf("%02hhx\n", arr[i]);
 			break;
 		}
-		printf("%hhx ", arr[i]);
+		printf("%02hhx ", arr[i]);
 	}
 	return (0);
 }
