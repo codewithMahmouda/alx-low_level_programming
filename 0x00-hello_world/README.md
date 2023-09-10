@@ -1,1 +1,1 @@
-This is a directory for C source files
+This is a directory for Bash scripts and some C source files
