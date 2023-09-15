@@ -16,11 +16,23 @@ void times_table(void)
 		for (col = 0; col < 10; col++)
 		{
 			res = row * col;
-			_putchar(res);
-			if (col < 9)
+			if (col == 0)
+			{
+				_putchar(res + '0');
+			}
+			if (res < 10 && col != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
+				_putchar(' ');
+				_putchar(res + '0');
+			}
+			else if (res >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((res / 10) + '0');
+				_putchar((res % 10) + '0');
 			}
 		}
 		_putchar('\n');
