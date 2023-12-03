@@ -1,53 +1,42 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * str_concat - a function that concatenates two strings.
- * @s1: first character
- * @s2: second character
- * Return: NULL on failure
+ * str_concat - This is a function that concatenates two strings.
+ * @s1: string to join.
+ * @s2: string to join.
+ *
+ * Return: pointer to string.
  */
-
 char *str_concat(char *s1, char *s2)
 {
-	char *new_str, *starts1, *starts2;
-	int i = 0, lens1 = 0, lens2 = 0;
+	char *new_str, lens1 = 0, lens2 = 0;
+	int i, c;
 
-	starts1 = s1;
-	starts2 = s2;
 	if (s1 == NULL)
-		s1 = "";
-	while (*s1)
-	{
-		lens1++;
-		s1++;
-	}
-	s1 = starts1;
+		s1 = " ";
+
 	if (s2 == NULL)
-		s2 = "";
-	while (*s2)
-	{
+		s2 = " ";
+
+	for (i = 0; s1[i] != '\0'; i++)
+		lens1++;
+
+	for (c = 0; s2[c] != '\0'; c++)
 		lens2++;
-		s2++;
-	}
-	s2 = starts2;
-	new_str = malloc(sizeof(char) * (lens1 + lens2 + 1));
-	starts1 = new_str;
+
+	new_str = malloc(sizeof(*new_str) * (lens1 + lens2 + 1));
+
 	if (new_str == NULL)
 		return (NULL);
-	for (; i < (lens1 + lens2); i++)
-	{
-		if (i < lens1)
-		{
-			new_str[i] = *s1;
-			s1++;
-		}
-		else
-		{
-			new_str[i] = *s2;
-			s2++;
-		}
-	}
-	new_str[i] = '\0';
-	return (starts1);
+
+	for (i = 0; i < lens1; i++)
+		new_str[i] = s1[i];
+
+	for (c = 0; c < lens2; c++)
+		new_str[i + c] = s2[c];
+
+	new_str[i + c] = '\0';
+
+	return (new_str);
 }
