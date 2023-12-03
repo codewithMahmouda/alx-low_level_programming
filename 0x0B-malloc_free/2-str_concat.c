@@ -35,7 +35,6 @@ char *str_concat(char *s1, char *s2)
 
 	for (c = 0; c < lens2; c++)
 		new_str[i + c] = s2[c];
-
 	new_str[i + c] = '\0';
 
 	return (new_str);
