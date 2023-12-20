@@ -3,7 +3,9 @@
 
 /**
  * _memory - This is a function that initializes memory byte to 0.
- *
+ * @c: this is pointer to check.
+ * @j: integer to initialize to.
+ * @k: byte size.
  * Return: pointer to memory location.
  */
 
